@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+    <div class="form-group">
+        <input type="text" name="em" placeholder="em" id="em" required>
+            <select name="em">
+                <option value="1">Saab</option>
+                <option value="2">Rover</option>
+                <option value="3">Daewoo</option>
+                <option value="4">Ford</option>
+                <option value="5">Peugeot</option>
+            </select>
+
+
+            
+            <div id="signup">
+              <div class="form-group">
+                <input type="text" name="email" placeholder="Email" id="email" required>
+              </div>
+            
+              <div class="form-group">
+                <input type="text" name="tn" placeholder="tn" required>
+              </div>
+            
+              
+
+
+            <script>
+$(function() {
+
+var form = $('#signup');
+var formMessages = $('#form');
+
+$('#signup.btn').on('click', function(e) {
+  e.preventDefault();
+  $('#thanks').hide();
+  var formData = {
+    'trackingnumber': $('input[name=email]').val(),
+    'email': $('input[name=courier]').val(),
+    'courier': $('select[name=em]').val(),
+  };
+
+  console.log(formData);
+});
+});
+
+
+            </script>
+   </div>
+</body>
+</html>
